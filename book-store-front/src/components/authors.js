@@ -13,26 +13,7 @@ class Authors extends React.Component {
       this.setState({ authors, loaded: true });
     };
 
-  
-// render(){
-//   let props = this.props;
-//   //let theme = this.context;
-//   const { authors } = this.state;
-//   return (
-//     <div {...props} style={{backgroundColor: themes.background}}>
-//       {authors.map(author => (
-//         <div key={author.id}>
-//           <h1>{author.fullName}</h1>
-//           <p>{author.age}</p>
-//         </div>
-//       ))}
-//     </div>
-//   )
-// }
-
-
-
-
+ 
   render() {
     let props = this.props;
     //let theme = this.context;
@@ -46,8 +27,8 @@ class Authors extends React.Component {
                 <th class='tbb'>Age</th>
             </tr>
             {authors.map(author => (
-             <React.Fragment key={author.id}>
-             <tr>
+             <React.Fragment>
+             <tr key={author.id}>
                 <td class='tbb'>{author.id}</td>
                 <td class='tbb'>{author.fullName}</td>
                 <td class='tbb'>{author.age}</td>

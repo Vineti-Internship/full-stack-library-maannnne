@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Authors from './components/authors.js'
+import Books from './components/books.js'
 import './App.css';
 import {ThemeContext, themes} from './components/context'
 
@@ -18,6 +19,7 @@ class App extends Component {
     return (
       <ThemeContext.Provider value={this.state.theme}>
         <Authors/>
+        <Books/>
       </ThemeContext.Provider>
     );
   }
