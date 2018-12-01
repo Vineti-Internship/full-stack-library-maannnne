@@ -10,8 +10,11 @@ class App extends Component {
   }
 
   async componentDidMount(){
-    const result = await fetch('http://localhost:3000/authors');
-    console.log(await result.json());
+    const result = await Promise([
+      fetch('http://localhost:3000/authors'),
+      fetch('http://localhost:3000/books')
+    ])
+    console.log(await result.json());   
   }
 
 
