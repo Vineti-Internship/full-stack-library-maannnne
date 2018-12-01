@@ -25,6 +25,7 @@ class Authors extends React.Component {
                 <th class='tbb'>ID</th>
                 <th class='tbb'>Author</th> 
                 <th class='tbb'>Age</th>
+                <th class='tbb'>Books Count</th>
             </tr>
             {authors.map(author => (
              <React.Fragment>
@@ -32,6 +33,7 @@ class Authors extends React.Component {
                 <td class='tbb'>{author.id}</td>
                 <td class='tbb'>{author.fullName}</td>
                 <td class='tbb'>{author.age}</td>
+                <td class='tbb'>{author.books_count}</td>
              </tr>
              </React.Fragment>
 

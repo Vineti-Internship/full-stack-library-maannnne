@@ -1,6 +1,5 @@
 import React from 'react';
 import {ThemeContext, themes} from './context'
-import Authors from './authors.js'
 
 class Books extends React.Component {
   state = {
@@ -24,6 +23,7 @@ class Books extends React.Component {
             <table  {...props} style={{backgroundColor: theme.background}}>
             <tr> 
                 <th class='tbb'>ID</th>
+                <th class='tbb'>Author</th>
                 <th class='tbb'>Title</th> 
                 <th class='tbb'>Rating</th>
             </tr>
@@ -31,6 +31,7 @@ class Books extends React.Component {
              <React.Fragment>
              <tr key={book.id}>
                 <td class='tbb'>{book.id}</td>
+                <td class='tbb'>{book.author_id}</td>
                 <td class='tbb'>{book.title}</td>
                 <td class='tbb'>{book.rating}</td>
              </tr>
